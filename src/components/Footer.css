@@ -1,0 +1,390 @@
+/* =========================================
+   PREMIUM FOOTER
+========================================= */
+
+.premium-footer {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.06),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255, 255, 255, 0.04),
+      transparent 30%
+    ),
+    #10131a;
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+
+/* Subtle top line */
+
+.premium-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.footer-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 85px 30px 70px;
+
+  display: grid;
+  grid-template-columns:
+    1.6fr
+    0.8fr
+    1.2fr
+    1fr;
+
+  gap: 55px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+  max-width: 390px;
+}
+
+.footer-logo {
+  margin-bottom: 25px;
+}
+
+.footer-logo span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+
+/* Description */
+
+.footer-description {
+  color: #aeb3bd;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0 0 25px;
+}
+
+
+/* =========================================
+   NDIS
+========================================= */
+
+.ndis-number {
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  padding-left: 16px;
+  margin-bottom: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ndis-number span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #858b96;
+}
+
+.ndis-number strong {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   FACEBOOK
+========================================= */
+
+.facebook-icon {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+.facebook-icon:hover {
+  background: white;
+  color: #10131a;
+  transform: translateY(-4px);
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3 {
+  position: relative;
+
+  margin: 0 0 27px;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.footer-column h3::after {
+  content: "";
+
+  display: block;
+
+  width: 28px;
+  height: 2px;
+
+  margin-top: 10px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   QUICK LINKS
+========================================= */
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 14px;
+}
+
+.footer-column ul li a {
+  position: relative;
+
+  color: #aeb3bd;
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.footer-column ul li a::before {
+  content: "→";
+
+  opacity: 0;
+  margin-right: 0;
+
+  transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: white;
+}
+
+.footer-column ul li a:hover::before {
+  opacity: 1;
+  margin-right: 8px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  color: #aeb3bd;
+  text-decoration: none;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  margin-bottom: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  min-width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   OPENING HOURS
+========================================= */
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 9px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  color: #aeb3bd;
+
+  font-size: 12px;
+}
+
+.hours-row span:first-child {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.hours-row.closed {
+  border-bottom: none;
+}
+
+.hours-row.closed span:last-child {
+  color: #888e99;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom-container {
+  max-width: 1250px;
+  margin: auto;
+
+  padding: 22px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #777d88;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.designer span {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    padding: 60px 24px 50px;
+
+    gap: 40px;
+  }
+
+  .footer-logo span {
+    font-size: 28px;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom-container {
+    padding: 20px 24px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+  .hours-row {
+    max-width: 360px;
+  }
+
+}

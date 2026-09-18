@@ -1,0 +1,534 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 120px 5%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fbf7ff 50%,
+      #f4eaff 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.about-top {
+  max-width: 1400px;
+
+  margin: 0 auto 100px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* Heading */
+
+.about-label {
+  color: #7b369f;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.about-heading h2 {
+  margin: 15px 0 25px;
+
+  font-size: clamp(50px, 6vw, 85px);
+
+  line-height: 0.95;
+
+  color: #17121c;
+
+  font-family: Georgia, serif;
+}
+
+
+/* Badge */
+
+.about-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 20px;
+
+  margin-bottom: 25px;
+
+  border-radius: 12px;
+
+  background: #f1e4f8;
+
+  color: #64228b;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.about-badge span {
+  font-size: 18px;
+}
+
+
+/* Description */
+
+.about-description {
+  max-width: 580px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #5e5664;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about-image {
+  position: relative;
+
+  height: 500px;
+
+  border-radius: 35px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(75, 35, 100, 0.18);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.06);
+}
+
+.image-overlay {
+  position: absolute;
+
+  left: 25px;
+  bottom: 25px;
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  background: rgba(92, 41, 145, 0.9);
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   SERVICES TITLE
+========================================= */
+
+.services-heading {
+  max-width: 1400px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.services-heading span {
+  color: #78359e;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.services-heading h3 {
+  margin-top: 12px;
+
+  font-size: clamp(32px, 4vw, 55px);
+
+  color: #19131e;
+
+  font-family: Georgia, serif;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.services-marquee {
+  width: 100%;
+
+  overflow: hidden;
+
+  padding: 20px 0 50px;
+}
+
+.services-track {
+  display: flex;
+
+  width: max-content;
+
+  gap: 25px;
+
+  animation: serviceMarquee 24s linear infinite;
+}
+
+
+/* ⭐ PAUSE WHEN MOUSE IS OVER IT */
+
+.services-marquee:hover .services-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  width: 390px;
+
+  min-height: 390px;
+
+  flex-shrink: 0;
+
+  padding: 35px;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(123, 54, 159, 0.12);
+
+  box-shadow:
+    0 15px 45px rgba(69, 30, 90, 0.09);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 25px 60px rgba(69, 30, 90, 0.16);
+}
+
+
+/* Icon */
+
+.service-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: #f0e1f8;
+
+  font-size: 28px;
+}
+
+
+/* Card heading */
+
+.service-card h4 {
+  max-width: 280px;
+
+  margin: 0;
+
+  font-size: 27px;
+
+  line-height: 1.15;
+
+  color: #201628;
+
+  font-family: Georgia, serif;
+}
+
+
+/* Purple line */
+
+.card-line {
+  width: 45px;
+
+  height: 3px;
+
+  margin: 22px 0;
+
+  background: #823ba5;
+
+  border-radius: 5px;
+}
+
+
+/* Card paragraph */
+
+.service-card p {
+  margin: 0;
+
+  color: #6b6470;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MARQUEE ANIMATION
+========================================= */
+
+@keyframes serviceMarquee {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   ANNE KERR QUOTE SECTION
+========================================= */
+
+.about-quote {
+  max-width: 1200px;
+
+  margin: 80px auto 0;
+
+  display: grid;
+
+  grid-template-columns: 380px 1fr;
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  border-radius: 35px;
+
+  background: linear-gradient(
+    135deg,
+    #602584,
+    #9149a8
+  );
+
+  color: white;
+
+  box-shadow:
+    0 25px 70px rgba(86, 31, 116, 0.25);
+}
+
+
+/* =========================================
+   ANNE PHOTO
+========================================= */
+
+.anne-photo {
+  height: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.anne-photo img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+
+  transition: transform 0.7s ease;
+}
+
+.about-quote:hover .anne-photo img {
+  transform: scale(1.05);
+}
+
+
+/* Purple gradient over image */
+
+.anne-photo::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent 55%,
+    rgba(96, 37, 132, 0.6)
+  );
+}
+
+
+/* =========================================
+   QUOTE CONTENT
+========================================= */
+
+.quote-content {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 55px 65px;
+}
+
+
+/* Quote symbol */
+
+.quote-mark {
+  position: absolute;
+
+  top: 25px;
+
+  left: 55px;
+
+  font-family: Georgia, serif;
+
+  font-size: 110px;
+
+  line-height: 1;
+
+  opacity: 0.25;
+}
+
+
+/* Main quote */
+
+.quote-content p {
+  max-width: 620px;
+
+  margin: 35px 0 25px;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(25px, 3vw, 40px);
+
+  font-weight: 600;
+
+  font-style: italic;
+
+  line-height: 1.3;
+}
+
+
+/* Anne name */
+
+.quote-content span {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+
+/* Founder title */
+
+.quote-content small {
+  font-size: 14px;
+
+  opacity: 0.75;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+  .about-quote {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .anne-photo {
+    height: 350px;
+  }
+
+  .quote-content {
+    padding: 50px 30px;
+  }
+
+  .quote-mark {
+    left: 30px;
+  }
+
+  .quote-content p {
+    margin-top: 35px;
+  }
+
+}
+
+
+
+

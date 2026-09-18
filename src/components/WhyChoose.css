@@ -1,0 +1,593 @@
+/* =========================================
+   WHY CHOOSE SECTION
+========================================= */
+
+.why-section {
+  width: 100%;
+
+  padding: 120px 4%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.05fr
+    1fr;
+
+  gap: 70px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fbf6ff
+    );
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.why-image-card {
+  position: relative;
+
+  height: 760px;
+
+  border-radius:
+    30px
+    100px
+    100px
+    30px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(188, 159, 210, 0.72);
+}
+
+.why-image-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================
+   PHONE CARD
+========================================= */
+
+.call-card {
+  position: absolute;
+
+  top: 30px;
+  left: 25px;
+
+  width: 240px;
+
+  padding: 30px;
+
+  border-radius:
+    30px
+    60px
+    60px
+    30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #5c2181,
+      #963fa9
+    );
+
+  color: white;
+
+  box-shadow:
+    0 20px 40px rgba(175, 154, 183, 0.25);
+}
+
+.call-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.15);
+
+  font-size: 28px;
+
+  margin-bottom: 25px;
+}
+
+.call-card h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+}
+
+.call-card p {
+  margin-top: 25px;
+
+  font-weight: 700;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   CENTER
+========================================= */
+
+.why-center {
+  padding-top: 5px;
+}
+
+.why-label {
+  color: #79389d;
+
+  font-family: Georgia, serif;
+
+  font-style: italic;
+
+  font-size: 22px;
+}
+
+.why-center h2 {
+  margin: 20px 0;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(48px, 5vw, 72px);
+
+  line-height: 1;
+
+  color: #171218;
+}
+
+.title-line {
+  width: 70px;
+
+  height: 3px;
+
+  margin: 30px 0;
+
+  background: #863ca5;
+}
+
+.why-intro {
+  max-width: 560px;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #625b66;
+}
+
+
+/* =========================================
+   FLIP CARD GRID
+========================================= */
+
+.flip-card-grid {
+  display: grid;
+
+  gap: 25px;
+
+  margin-top: 45px;
+}
+
+
+/* =========================================
+   FLIP CARD
+========================================= */
+
+.flip-card {
+  width: 100%;
+
+  height: 190px;
+
+  perspective: 1200px;
+
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transition:
+    transform 0.7s
+    cubic-bezier(.2,.7,.2,1);
+
+  transform-style: preserve-3d;
+}
+
+
+/* ⭐ FLIP ON HOVER */
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* =========================================
+   FRONT + BACK
+========================================= */
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+
+  border: 1px solid rgba(120, 55, 155, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(70, 30, 90, 0.08);
+}
+
+
+/* FRONT */
+
+.flip-card-front {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  background: white;
+}
+
+.flip-card-front h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  color: #1d1720;
+}
+
+
+/* BACK */
+
+.flip-card-back {
+  transform: rotateY(180deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      #713094,
+      #9845aa
+    );
+
+  color: white;
+}
+
+.flip-card-back h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+}
+
+.flip-card-back p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.flip-icon {
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f2e6f8;
+
+  color: #8538a6;
+
+  font-size: 32px;
+}
+
+.flip-card-back .flip-icon {
+  width: 45px;
+  height: 45px;
+
+  margin-bottom: 10px;
+
+  background: rgba(255,255,255,0.15);
+
+  color: white;
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   HOVER HINT
+========================================= */
+
+.hover-hint {
+  margin-left: auto;
+
+  align-self: flex-end;
+
+  font-size: 11px;
+
+  color: #9a7aa8;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.why-right {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.right-flip {
+  height: 205px;
+}
+
+
+/* =========================================
+   ANNE MESSAGE
+========================================= */
+
+.anne-message {
+  height: 270px;
+
+  perspective: 1200px;
+
+  cursor: pointer;
+}
+
+.anne-flip-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(.2,.7,.2,1);
+}
+
+.anne-message:hover .anne-flip-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* FRONT */
+
+.anne-front,
+.anne-back {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 35px;
+
+  border-radius:
+    28px
+    65px
+    28px
+    28px;
+
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* Purple front */
+
+.anne-front {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #68258a,
+      #9844a8
+    );
+
+  color: white;
+}
+
+.anne-front img {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid white;
+}
+
+.anne-front h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+}
+
+.anne-front span {
+  display: block;
+
+  margin-top: 12px;
+
+  font-size: 12px;
+
+  opacity: 0.7;
+}
+
+
+/* BACK */
+
+.anne-back {
+  transform: rotateY(180deg);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #68258a,
+      #9844a8
+    );
+
+  color: white;
+}
+
+.quote-symbol {
+  position: absolute;
+
+  top: 15px;
+  right: 35px;
+
+  font-family: Georgia, serif;
+
+  font-size: 80px;
+
+  opacity: 0.2;
+}
+
+.anne-back p {
+  margin: 0 0 18px;
+
+  font-family: Georgia, serif;
+
+  font-style: italic;
+
+  font-size: 21px;
+
+  line-height: 1.45;
+}
+
+.anne-back strong {
+  font-size: 17px;
+}
+
+.anne-back small {
+  margin-top: 4px;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .why-section {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+  }
+
+  .why-right {
+    grid-column: span 2;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .why-section {
+    grid-template-columns: 1fr;
+
+    padding: 80px 20px;
+  }
+
+  .why-image-card {
+    height: 550px;
+  }
+
+  .why-right {
+    grid-column: auto;
+
+    display: flex;
+  }
+
+  .flip-card {
+    height: 220px;
+  }
+
+  .anne-message {
+    height: 300px;
+  }
+
+}

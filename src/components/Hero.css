@@ -1,0 +1,447 @@
+* {
+  box-sizing: border-box;
+}
+
+.hero-page {
+  width: 100%;
+  height: 200vh;
+  background: #12091d;
+}
+
+
+/* =========================================
+   HERO STAGE
+========================================= */
+
+.hero-stage {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #f8f5fa;
+}
+
+
+/* =========================================
+   NURSE + LAPTOP IMAGE
+========================================= */
+
+.hero-photo {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  object-fit: cover;
+
+  /*
+    IMPORTANT:
+    This focuses on the TOP nurse/laptop.
+    The lower laptop in the generated image
+    will be pushed outside the visible area
+    when we zoom.
+  */
+
+  object-position: center 25%;
+
+  transform-origin: 25% 87%;
+
+  transition: transform 0.08s linear;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 24px 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Soft transparent background */
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(12px);
+
+  z-index: 20;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #54228a;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #352044;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #6b32a0;
+}
+
+/* Get In Touch */
+.contact-btn {
+  border: none;
+
+  padding: 12px 24px;
+
+  border-radius: 30px;
+
+  background: #5c2991;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+}
+  
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #54228a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #171717;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6d32a8;
+}
+
+.contact-btn {
+  border: none;
+
+  padding: 13px 27px;
+
+  border-radius: 30px;
+
+  background: #5c2991;
+
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   INITIAL HERO CONTENT
+========================================= */
+
+.hero-intro {
+  position: absolute;
+
+  z-index: 10;
+
+  right: 7%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 40%;
+
+  transition: opacity 0.3s ease;
+}
+
+.hero-intro span {
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.hero-intro h1 {
+  margin: 20px 0;
+
+  font-size: clamp(40px, 4vw, 65px);
+
+  line-height: 1.05;
+
+  color: white;
+}
+
+.hero-intro h1 strong {
+  color: white;
+}
+
+.hero-intro p {
+  max-width: 550px;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  color: white;
+}
+
+.hero-intro button {
+  margin-top: 25px;
+
+  border: none;
+
+  padding: 15px 28px;
+
+  border-radius: 30px;
+
+  background: #60309a;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   LAPTOP SCREEN MESSAGE
+========================================= */
+
+.laptop-message {
+  position: absolute;
+
+  z-index: 15;
+
+  left: 42%;
+  top: 44%;
+
+  width: 40%;
+
+  text-align: center;
+
+  color: #111;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.08s linear;
+}
+
+.laptop-message h2 {
+  margin: 0;
+
+  font-size: clamp(35px, 5vw, 80px);
+
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  color: #6630a0;
+}
+
+.message-line {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin: 25px 0;
+}
+
+.message-line span {
+  width: 90px;
+
+  height: 2px;
+
+  background: #6630a0;
+}
+
+.message-line b {
+  color: #6630a0;
+
+  font-size: 25px;
+}
+
+.laptop-message p {
+  margin: 12px auto;
+
+  max-width: 750px;
+
+  font-size: clamp(14px, 1.4vw, 23px);
+
+  line-height: 1.45;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-down {
+  position: absolute;
+
+  z-index: 30;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid white;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 23px;
+
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 10px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .contact-btn {
+    padding: 10px 18px;
+  }
+
+  .hero-photo {
+    object-position: 35% 25%;
+  }
+
+  .hero-intro {
+    top: auto;
+
+    bottom: 12%;
+
+    left: 7%;
+
+    width: 86%;
+  }
+
+  .hero-intro h1 {
+    font-size: 38px;
+  }
+
+  .hero-intro p {
+    font-size: 16px;
+  }
+
+  .laptop-message {
+    left: 50%;
+
+    top: 45%;
+
+    width: 80%;
+  }
+
+  .laptop-message h2 {
+    font-size: 43px;
+  }
+
+  .laptop-message p {
+    font-size: 15px;
+  }
+
+}
